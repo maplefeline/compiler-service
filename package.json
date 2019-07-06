@@ -12,17 +12,25 @@
   "files": [
     "peg.js",
     "peg.peg",
+    "peg.schema",
     "server.js",
     "schema.json",
     "views"
   ],
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "jasmine"
   },
   "dependencies": {
     "baconjs": "^0.7.92",
     "express": "^4.15.2",
     "pug": "^2.0.0-beta11",
     "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "ajv": "^4.11.5",
+    "jasmine": "^2.5.3",
+    "pegjs": "^0.10.0",
+    "supertest": "^3.0.0"
   }
 }
