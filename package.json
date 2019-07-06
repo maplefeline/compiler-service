@@ -2,6 +2,10 @@
   "version": "1.0.0",
   "description": "Syntax tree for PEG grammars",
   "author": "asa aveanna <asa@holomaplefeline.net>",
+  "engines": {
+    "node": ">=7.8.0",
+    "npm": ">=4.5.0"
+  },
   "keywords": [
     "peg",
     "yacc",
