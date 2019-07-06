@@ -21,7 +21,6 @@
     "views"
   ],
   "scripts": {
-    "start": "node server.js",
     "test": "jasmine"
   },
   "dependencies": {
