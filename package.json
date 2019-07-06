@@ -10,11 +10,10 @@
   "license": "MIT",
   "main": "server.js",
   "files": [
-    "peg.js",
-    "peg.peg",
-    "peg.schema",
+    "app.js",
     "server.js",
-    "schema.json",
+    "api",
+    "resources",
     "views"
   ],
   "scripts": {
@@ -25,8 +24,7 @@
     "baconjs": "^0.7.92",
     "express": "^4.15.2",
     "pug": "^2.0.0-beta11",
-    "superagent": "^3.5.2",
-    "winston": "^2.3.1"
+    "superagent": "^3.5.2"
   },
   "devDependencies": {
     "ajv": "^4.11.5",
