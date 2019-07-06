@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "description": "Syntax tree for PEG grammars",
+  "author": "asa aveanna <asa@holomaplefeline.net>",
+  "keywords": [
+    "peg",
+    "yacc",
+    "syntax"
+  ],
+  "license": "MIT",
+  "main": "server.js",
+  "files": [
+    "peg.js",
+    "peg.peg",
+    "server.js",
+    "schema.json",
+    "views"
+  ],
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "baconjs": "^0.7.92",
+    "express": "^4.15.2",
+    "pug": "^2.0.0-beta11",
+    "winston": "^2.3.1"
+  }
+}
