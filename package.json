@@ -1,27 +1,81 @@
 {
   "author": "asa aveanna <asa@holomaplefeline.net>",
+  "browserslist": [
+    "> 5%",
+    "last 2 versions"
+  ],
   "dependencies": {
     "ajv": "*",
     "baconjs": "*",
     "express": "*",
     "jsonpath": "*",
     "pug": "*",
+    "register-service-worker": "*",
     "run-middleware": "*",
-    "superagent": "*"
+    "superagent": "*",
+    "vue": "*",
+    "vue-class-component": "*",
+    "vue-property-decorator": "*",
+    "vue-router": "*"
   },
   "description": "Syntax tree for PEG grammars",
   "devDependencies": {
+    "@types/chai": "*",
+    "@types/mocha": "*",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
+    "@vue/cli-plugin-eslint": "*",
+    "@vue/cli-plugin-pwa": "*",
+    "@vue/cli-plugin-router": "*",
+    "@vue/cli-plugin-typescript": "*",
+    "@vue/cli-plugin-unit-mocha": "*",
+    "@vue/cli-service": "*",
+    "@vue/eslint-config-standard": "*",
+    "@vue/eslint-config-typescript": "*",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "chai": "*",
     "eslint": "*",
+    "eslint-plugin-vue": "*",
     "jasmine": "*",
+    "less": "*",
+    "less-loader": "*",
+    "lint-staged": "*",
     "pegjs": "*",
     "standard": "*",
     "supertest": "*",
-    "typescript": "*"
+    "typescript": "*",
+    "vue-template-compiler": "*",
+    "webpack": "*"
   },
   "engines": {
     "node": "*"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/recommended",
+      "@vue/standard",
+      "@vue/typescript"
+    ],
+    "overrides": [
+      {
+        "env": {
+          "mocha": true
+        },
+        "files": [
+          "**/__tests__/*.{j,t}s?(x)"
+        ]
+      }
+    ],
+    "parserOptions": {
+      "parser": "@typescript-eslint/parser"
+    },
+    "root": true
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
   },
   "keywords": [
     "peg",
@@ -29,11 +83,31 @@
     "syntax"
   ],
   "license": "MIT",
+  "lint-staged": {
+    "*.{js,vue,ts}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  },
   "main": "index.js",
-  "name": "TaaS",
+  "name": "taas",
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "private": true,
+  "scripts": {
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "serve": "vue-cli-service serve",
+    "test:unit": "vue-cli-service test:unit"
+  },
   "standard": {
     "parser": "@typescript-eslint/parser",
-    "plugins": [ "@typescript-eslint/eslint-plugin" ]
+    "plugins": [
+      "@typescript-eslint/eslint-plugin"
+    ]
   },
   "version": "1.0.0"
 }
